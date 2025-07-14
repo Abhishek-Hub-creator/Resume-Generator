@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Automated Resume Generator</h1>
+            <!-- <p>Craft your perfect resume with the power of AI.</p> -->
+        </header>
+
+        <main class="resume-form">
+            <section class="user-info">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="john.doe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" placeholder="+1234567890">
+                </div>
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profile (Optional)</label>
+                    <input type="url" id="linkedin" placeholder="https://linkedin.com/in/johndoe">
+                </div>
+                <div class="form-group">
+                    <label for="github">GitHub Profile (Optional)</label>
+                    <input type="url" id="github" placeholder="https://github.com/johndoe">
+                </div>
+            </section>
+
+            <section class="summary-info">
+                <h2>Professional Summary</h2>
+                <div class="form-group">
+                    <label for="summary">Tell us about yourself</label>
+                    <textarea id="summary" rows="5" placeholder="Passionate software engineer with X years of experience..."></textarea>
+                </div>
+            </section>
+
+            <section class="experience-info">
+                <h2>Work Experience</h2>
+                <div id="experienceEntries">
+                    <div class="experience-entry">
+                        <div class="form-group">
+                            <label for="jobTitle1">Job Title</label>
+                            <input type="text" class="jobTitle" placeholder="Software Engineer">
+                        </div>
+                        <div class="form-group">
+                            <label for="company1">Company</label>
+                            <input type="text" class="company" placeholder="Tech Innovations Inc.">
+                        </div>
+                        <div class="form-group-inline">
+                            <div class="form-group">
+                                <label for="startDate1">Start Date</label>
+                                <input type="month" class="startDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="endDate1">End Date (or "Present")</label>
+                                <input type="month" class="endDate">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="responsibilities1">Key Responsibilities & Achievements</label>
+                            <textarea class="responsibilities" rows="3" placeholder="- Developed scalable web applications
+- Collaborated with cross-functional teams"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-button" id="addExperience">Add More Experience</button>
+            </section>
+
+            <section class="education-info">
+                <h2>Education</h2>
+                <div id="educationEntries">
+                    <div class="education-entry">
+                        <div class="form-group">
+                            <label for="degree1">Degree/Program</label>
+                            <input type="text" class="degree" placeholder="M.Sc. Computer Science">
+                        </div>
+                        <div class="form-group">
+                            <label for="university1">University/Institution</label>
+                            <input type="text" class="university" placeholder="University of Technology">
+                        </div>
+                        <div class="form-group-inline">
+                            <div class="form-group">
+                                <label for="eduStartDate1">Start Date</label>
+                                <input type="month" class="eduStartDate">
+                            </div>
+                            <div class="form-group">
+                                <label for="eduEndDate1">End Date</label>
+                                <input type="month" class="eduEndDate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="add-button" id="addEducation">Add More Education</button>
+            </section>
+
+            <section class="skills-info">
+                <h2>Skills</h2>
+                <div class="form-group">
+                    <label for="technicalSkills">Technical Skills</label>
+                    <input type="text" id="technicalSkills" placeholder="Python, JavaScript, React, AWS, Docker">
+                </div>
+                <div class="form-group">
+                    <label for="softSkills">Soft Skills</label>
+                    <input type="text" id="softSkills" placeholder="Communication, Teamwork, Problem-solving">
+                </div>
+            </section>
+
+            <button type="submit" class="generate-button" id="generateResume">Generate Resume</button>
+        </main>
+
+        <section id="resumeOutput" class="resume-output">
+            <h2>Your Generated Resume (Preview)</h2>
+            <div id="generatedContent" class="generated-content">
+                <p class="placeholder-text">Enter your details and click "Generate Resume" to see a preview.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
